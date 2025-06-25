@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI LinkedIn Post Generator</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <header>
@@ -13,7 +15,7 @@
 
     <div class="container">
       <main>
-        <form id="search-form">
+        <form id="post-generator-form">
           <input
             type="text"
             placeholder="Tell me about the post.."
@@ -29,7 +31,7 @@
             class="generate-button"
           />
         </form>
-        <div class="post">the post will go here</div>
+        <div class="post" id="post"></div>
       </main>
 
       <footer class="author">
