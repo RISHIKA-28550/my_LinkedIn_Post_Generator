@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Welcome</h1>
+    <header>
+      <h1>Welcome</h1>
+    </header>
+
+    <main>
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Enter the topic of your post.."
+          id="search-input"
+          class="search-input"
+          autofocus
+          required
+        />
+        <input
+          type="submit"
+          value="Generate"
+          id="generate-button"
+          class="generate-button"
+        />
+      </form>
+      <div>the post will go here</div>
+    </main>
 
     <footer class="author">
       This AI project was coded by
