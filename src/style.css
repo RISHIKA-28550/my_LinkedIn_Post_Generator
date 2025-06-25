@@ -65,11 +65,10 @@ form {
 .post {
   background-color: rgba(255, 255, 255, 1);
   font-size: 16px;
-  padding: 20px;
-  line-height: 1.5;
+  padding: 40px;
+  line-height: 1.8;
   border-left: 8px solid #ff4081;
   border-radius: 10px;
-  height: 80px;
   margin-top: 60px;
   box-shadow: 10px 10px 20px #000;
 }
