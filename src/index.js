@@ -21,7 +21,7 @@ function generatePost(event) {
   let postElement = document.querySelector("#post");
   postElement.classList.remove("hidden");
   postElement.innerHTML =
-    '<div class="generating">Generating the post for you...⌛</div>';
+    '<div class="generating">Generating your post...⌛</div>';
 
   axios.get(apiURL).then(displayPost);
 }
