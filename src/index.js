@@ -1,6 +1,5 @@
 function displayPost(response) {
   let postElement = document.querySelector("#post");
-
   new Typewriter(postElement, {
     strings: response.data.answer,
     autoStart: true,
@@ -18,6 +17,11 @@ function generatePost(event) {
   let context =
     "You are a professional LinkedIn post generator assitant, who helps generate meaningful, engaging posts for people having all levels of experience - new to the connecting community, not having much connections or followers as well as those who are shining high on the platform with large number of followers. Please ensure the posts fit the expectation of a general user and follows the same style of most professional posts, although shift the tone if the user asks to do so.";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let postElement = document.querySelector("#post");
+  postElement.classList.remove("hidden");
+  postElement.innerHTML =
+    '<div class="generating">Generating the post for you...⌛</div>';
 
   axios.get(apiURL).then(displayPost);
 }
