@@ -6,13 +6,13 @@ body {
 }
 
 .container {
-  margin: 30px auto;
-  max-width: 1000px;
+  margin: 20px auto;
+  max-width: 800px;
   padding: 50px;
 }
 
 header {
-  margin-bottom: 80px;
+  margin-bottom: 25px;
 }
 
 form {
@@ -77,8 +77,8 @@ form {
 h1 {
   color: #fff;
   font-weight: 800;
-  font-size: 52px;
-  padding: 50px;
+  font-size: 42px;
+  padding: 40px;
   border-radius: 4px;
   line-height: 1.5;
   text-align: center;
@@ -102,8 +102,6 @@ a:hover {
 footer {
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 50px;
 }
-
-
