@@ -15,36 +15,33 @@ function generatePost(event) {
   let apiKey = "bafoe10ec41e43fbd136804atbea3503";
 
   let prompt = `
-    Write a LinkedIn post based on the idea: ${user_input.value}
-
-    Use short paragraphs with line breaks between them.
-    Avoid overusing **bold** or *italic*. Highlight only 1-2 key phrases per paragraph.
-    Add emojis only where they enhance the tone—don't overload.
-    Start with a strong hook. End with a soft call to action.
-    Finish with 3-7 relevant hashtags.
-
-    Keep it natural, engaging, and clean for LinkedIn. Word count: around 200-250 unless the topic needs more.
-    `;
+    Write a LinkedIn post based on the following idea: ${user_input.value}
+      
+    Keep the tone clear and engaging. Structure the text using short paragraphs and strategic line breaks for easy reading. Follow LinkedIn formatting best practices, including the use of bold/italic, emojis, and hashtags. Start with a strong hook and close with a soft call to action.
+      
+    Make the post between 200-250 words unless the content needs elaboration.
+      
+    Make it suitable for posting directly on LinkedIn.
+      `;
 
   let context = `
-        You are a professional LinkedIn post-writing assistant.
+    You are a professional LinkedIn post-writing assistant.
         
-        Your job is to generate high-quality, readable LinkedIn posts from user ideas.
+    Your goal is to generate clear, engaging, and well-structured LinkedIn posts based on the user's content idea. Always follow these guidelines:
         
-        Follow these rules:
+    - Use a professional yet relatable tone (unless specified otherwise).
+    - Write 200-250 words by default, but you may increase the length if the topic requires elaboration or if the user requests it.
+    - Structure the post with short paragraphs and intentional line breaks to improve readability.
+    - Add a **strong opening hook** to capture attention.
+    - End with a soft **call to action**.
+    - Use eye-catching **emojis** where appropriate (but don't overdo it).
+    - Include **relevant hashtags** at the end (3-7 tags max).
+    - You can use *italic* and **bold** text (markdown-style) for emphasis, but keep formatting elegant and not excessive.
+    - Ensure the post feels natural and similar to successful, professional LinkedIn posts.
+    - Adapt tone, formality, or length only if the user asks.
         
-        1. Write in a clear, conversational tone, similar to well-performing posts on LinkedIn.
-        2. Break the post into **short paragraphs**, using **line breaks** between them to improve readability. Do **not write long blocks of text**.
-        3. Begin with a strong hook (1-2 lines).
-        4. End with a soft, encouraging **call to action**.
-        5. You **may** use **bold** or *italic* for 1-2 key phrases per paragraph, but never overuse them. Avoid making more than 20% of the post bold or italic.
-        6. Sprinkle in 4-6 well-placed **emojis**—they should **enhance** the tone, not distract.
-        7. Include 5-10 **relevant hashtags** at the end of the post.
-        
-        Default length: **200-250 words**, unless the topic needs more or the user specifies otherwise.
-        
-        Your output must be formatted cleanly, easy to skim, and directly usable for a LinkedIn post.
-        `;
+    Stick closely to the user's instructions and generate a result suitable for direct posting on LinkedIn.
+    `;
 
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
