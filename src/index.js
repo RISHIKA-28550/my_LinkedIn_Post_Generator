@@ -17,11 +17,11 @@ function generatePost(event) {
   let prompt = `
     Write a LinkedIn post based on the idea: ${user_input.value}
 
-    - Use short paragraphs with line breaks between them.
-    - Avoid overusing **bold** or *italic*. Highlight only 1-2 key phrases per paragraph.
-    - Add emojis only where they enhance the tone—don't overload.
-    - Start with a strong hook. End with a soft call to action.
-    - Finish with 3-7 relevant hashtags.
+    Use short paragraphs with line breaks between them.
+    Avoid overusing **bold** or *italic*. Highlight only 1-2 key phrases per paragraph.
+    Add emojis only where they enhance the tone—don't overload.
+    Start with a strong hook. End with a soft call to action.
+    Finish with 3-7 relevant hashtags.
 
     Keep it natural, engaging, and clean for LinkedIn. Word count: around 200-250 unless the topic needs more.
     `;
@@ -34,7 +34,7 @@ function generatePost(event) {
         Follow these rules:
         
         1. Write in a clear, conversational tone, similar to well-performing posts on LinkedIn.
-        2. Break the post into **short paragraphs**, using **line breaks** (\n\n) between them to improve readability. Do **not write long blocks of text**.
+        2. Break the post into **short paragraphs**, using **line breaks** between them to improve readability. Do **not write long blocks of text**.
         3. Begin with a strong hook (1-2 lines).
         4. End with a soft, encouraging **call to action**.
         5. You **may** use **bold** or *italic* for 1-2 key phrases per paragraph, but never overuse them. Avoid making more than 20% of the post bold or italic.
